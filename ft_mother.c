@@ -27,10 +27,8 @@ int	ft_mother(const char *str, va_list args)
 				len += ft_putnbr(va_arg(args, int));
 			else if (*str == 'u')
 				len += ft_putnbr(va_arg(args, unsigned int));
-			else if (*str == 'x')
-				len += ft_putex_lower(va_arg(args, long long), *str);
-			else if (*str == 'X')
-				len += ft_putex_upper(va_arg(args,))
+			else if (*str == 'x' || *str == 'X')
+				len += ft_putex(va_arg(args, long long), *str);
 			else if (*str == '%')
 				len += ft_putchar('%');
 		}
