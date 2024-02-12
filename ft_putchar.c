@@ -6,11 +6,12 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:11:28 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/11 17:03:17 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/12 12:21:14 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return (1);
 }

@@ -1,17 +1,23 @@
-int	ft_putptr(unsigned long long add)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/12 13:27:26 by ffontana          #+#    #+#             */
+/*   Updated: 2024/02/12 13:47:35 by ffontana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	prepare_buffer(unsigned long long add, char *buffer)
 {
-	int	l;
 	int	digit;
-	char	*buffer;
 	int	i;
 
 	i = 0;
-	l = 0;
-	buffer = (char *)malloc(sizeof(char) * (base_len(add) + 1));
-	if (!buffer)
-		return (NULL);
 	if (add == 0)
-		len += ft_putchar('0');
+		return (ft_putchar('0'));
 	while (add > 0)
 	{
 		digit = add % 16;
@@ -23,6 +29,20 @@ int	ft_putptr(unsigned long long add)
 		i++;
 	}
 	buffer[i] = '\0';
+	return (0);
+}
+
+int	ft_putptr(unsigned long long add)
+{
+	int		l;
+	char	*buffer;
+
+	buffer = (char *)malloc(sizeof(char) * (base_len(add) + 1));
+	if (!buffer)
+		return (NULL);
+	l = prepare_buffer(add, buffer);
 	ft_reverse(buffer);
-	len += ft_putstr(buffer);
+	l += ft_putstr(buffer);
+	free(buffer);
+	return (l);
 }
