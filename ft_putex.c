@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
+
 int	ft_putex(size_t n, char x)
 {
 	char	*base;
@@ -25,7 +27,7 @@ int	ft_putex(size_t n, char x)
 		base = "0123456789ABCDEF";
 	n_ex = (char *)malloc(sizeof(char) * (l_ex + 1));
 	if (!n_ex)
-		return (NULL);
+		return (0);
 	while (n > 0)
 	{
 		n_ex[i] = base[n % 16];
@@ -37,3 +39,4 @@ int	ft_putex(size_t n, char x)
 	l_ex = ft_putstr(n_ex);
 	return (l_ex);
 }
+

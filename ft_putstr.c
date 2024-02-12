@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
+
 int	ft_putstr(char *s)
 {
 	int	i;
 
 	i = 0;
-	if (*s == NULL)
+	if (s == NULL)
 	{
 		i += ft_putstr("(null)");
 		return (i);

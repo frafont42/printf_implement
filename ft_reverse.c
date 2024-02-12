@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
+
 void	ft_reverse(char *str)
 {
 	size_t	l;
-	int		i;
+	size_t	i;
 	size_t	n;
 
 	l = ft_strlen(str);

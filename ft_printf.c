@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
+
 int	ft_printf(const char *mainstr, ...)
 {
 	int		len;
@@ -24,7 +26,7 @@ int	ft_printf(const char *mainstr, ...)
 			len += ft_mother(mainstr, args);
 		else
 		{
-			while (*mainstr++ && *s != '%')
+			while (*mainstr++ && *mainstr != '%')
 				len += ft_putchar(*mainstr);
 		}
 	}

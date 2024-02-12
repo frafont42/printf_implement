@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	prepare_buffer(unsigned long long add, char *buffer)
+#include "libftprintf.h"
+
+static int	prepare_buffer(unsigned long long add, char *buffer)
 {
 	int	digit;
 	int	i;
@@ -32,6 +34,19 @@ int	prepare_buffer(unsigned long long add, char *buffer)
 	return (0);
 }
 
+static int	base_len(unsigned long long n)
+{
+	int	i;
+
+	i = 0;
+	while (n > 0)
+	{
+		n /= 16;
+		i++;
+	}
+	return (i);
+}
+
 int	ft_putptr(unsigned long long add)
 {
 	int		l;
@@ -39,7 +54,7 @@ int	ft_putptr(unsigned long long add)
 
 	buffer = (char *)malloc(sizeof(char) * (base_len(add) + 1));
 	if (!buffer)
-		return (NULL);
+		return (0);
 	l = prepare_buffer(add, buffer);
 	ft_reverse(buffer);
 	l += ft_putstr(buffer);

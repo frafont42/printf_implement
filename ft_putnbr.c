@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
+
 int	ft_putnbr(int n)
 {
 	unsigned long int	i;
@@ -19,7 +21,7 @@ int	ft_putnbr(int n)
 	len = 0;
 	if (n < 0)
 	{
-		ft_putchar_fd('-');
+		ft_putchar('-');
 		i *= -1;
 	}
 	else if (i == 0)
