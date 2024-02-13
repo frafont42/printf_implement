@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putexx.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 12:26:13 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/12 12:40:21 by ffontana         ###   ########.fr       */
+/*   Created: 2024/02/13 20:12:46 by ffontana          #+#    #+#             */
+/*   Updated: 2024/02/13 20:20:30 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_putexx(size_t n)
 {
-	unsigned long int	i;
-	int					len;
+	char	*base;
+	char	*n_ex;
+	int		l_ex;
+	int		i;
 
-	i = (unsigned long)n;
-	len = 0;
-	if (n < 0)
+	l_ex = ft_n_ex_len(n);
+	i = 0;
+	base = "0123456789ABCDEF";
+	n_ex = (char *)malloc(sizeof(char) * (l_ex + 1));
+	if (!n_ex)
+		return (0);
+	while (n > 0)
 	{
-		ft_putchar('-');
-		i *= -1;
+		n_ex[i] = base[n % 16];
+		n = n / 16;
+		i++;
 	}
-	else if (i == 0)
-		return (len + ft_putchar('0'));
-	else if (i >= 10)
-		len += ft_putnbr(i / 10);
-	len += ft_putchar((char)(i % 10 + 48));
-	return (len);
+	n_ex[i] = '\0';
+	ft_reverse(n_ex);
+	l_ex = ft_putstr(n_ex);
+	free(n_ex);
+	return (l_ex);
 }

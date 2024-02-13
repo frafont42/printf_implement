@@ -6,11 +6,11 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:01:55 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/11 17:37:42 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/13 20:02:52 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *mainstr, ...)
 {
@@ -19,21 +19,18 @@ int	ft_printf(const char *mainstr, ...)
 
 	va_start(args, mainstr);
 	len = 0;
-	if (*mainstr == '%')
+	while (*mainstr)
 	{
-		mainstr++;
-		if (ft_checkit(*mainstr) == 1)
-			len += ft_mother(mainstr, args);
+		if (*mainstr == '%')
+		{
+			mainstr++;
+			len += ft_mother(*mainstr, args);
+		}
 		else
 		{
-			while (*mainstr++ && *mainstr != '%')
-				len += ft_putchar(*mainstr);
-		}
-	}
-	else
-	{
-		while (*mainstr++ && *mainstr != '%')
 			len += ft_putchar(*mainstr);
+		}
+		mainstr++;
 	}
 	va_end(args);
 	return (len);

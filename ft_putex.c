@@ -6,13 +6,13 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:52:14 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/12 13:52:17 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/13 20:22:33 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	ft_putex(size_t n, char x)
+int	ft_putex(size_t n)
 {
 	char	*base;
 	char	*n_ex;
@@ -21,10 +21,7 @@ int	ft_putex(size_t n, char x)
 
 	l_ex = ft_n_ex_len(n);
 	i = 0;
-	if (x == 'x')
-		base = "0123456789abcdef";
-	else if (x == 'X')
-		base = "0123456789ABCDEF";
+	base = "0123456789abcdef";
 	n_ex = (char *)malloc(sizeof(char) * (l_ex + 1));
 	if (!n_ex)
 		return (0);
@@ -37,6 +34,6 @@ int	ft_putex(size_t n, char x)
 	n_ex[i] = '\0';
 	ft_reverse(n_ex);
 	l_ex = ft_putstr(n_ex);
+	free(n_ex);
 	return (l_ex);
 }
-
