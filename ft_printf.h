@@ -25,7 +25,7 @@ int		ft_putchar(char c);
 int		ft_putstr(char *s);
 int		ft_putex(size_t n);
 int		ft_putexx(size_t n);
-void	ft_reverse(char *str);
+char	*ft_reverse(char *str);
 int		ft_n_ex_len(size_t n);
 int		ft_putnbr(int n);
 int		ft_putptr(unsigned long long add);
