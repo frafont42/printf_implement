@@ -12,50 +12,22 @@
 
 #include "ft_printf.h"
 
-static int	prepare_buffer(unsigned long long add, char *buffer)
-{
-	int	digit;
-	int	i;
-
-	i = 0;
-	if (add == 0)
-		return (ft_putchar('0'));
-	while (add > 0)
-	{
-		digit = add % 16;
-		if (digit > 10)
-			buffer[i] = digit + 48;
-		else
-			buffer[i] = 'a' + (digit - 10);
-		add /= 16;
-		i++;
-	}
-	buffer[i] = '\0';
-	return (0);
-}
-
-static int	base_len(unsigned long long n)
-{
-	int	i;
-
-	i = 0;
-	while (n > 0)
-	{
-		n /= 16;
-		i++;
-	}
-	return (i);
-}
-
 int	ft_putptr(unsigned long long add)
 {
 	int		l;
 	char	*buffer;
 
-	buffer = (char *)malloc(sizeof(char) * (base_len(add) + 1));
-	if (!buffer)
-		return (0);
-	l = prepare_buffer(add, buffer);
+	l = 0;
+	while (add > 0)
+	{
+		if (add % 16 > 10)
+			*buffer = 'a' + (add % 16) -10;
+		else
+			*buffer = (add % 16) + 48;
+		buffer++;
+		add /= 16;
+	}
+	*buffer = '\0';
 	ft_reverse(buffer);
 	l += ft_putstr(buffer);
 	free(buffer);

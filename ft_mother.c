@@ -24,7 +24,7 @@ int	ft_mother(char c, va_list args)
 	else if (c == 'd' || c == 'i')
 		len += ft_putnbr(va_arg(args, int));
 	else if (c == 'u')
-		len += ft_putnbr(va_arg(args, unsigned int));
+		len += ft_putuint(va_arg(args, unsigned int));
 	else if (c == 'x' || c == 'X')
 		len += ft_putex(va_arg(args, long long));
 	else if (c == 'X')

@@ -37,9 +37,9 @@ int	ft_printf(const char *mainstr, ...)
 	va_end(args);
 	return (len);
 }
-// int main()
-// {
-// 	ft_printf("%d\n", INT_MIN);
-// 	//ft_printf("%d\n", -11);
-// 	printf("%d\n", INT_MIN);
-// }
+//int main()
+//{
+//	char *ptr = "abcd";
+//	ft_printf("%p\n", (void *)ptr);
+//	printf("%p\n", (void *)ptr);
+//}

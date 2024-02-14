@@ -13,22 +13,17 @@
 #include "ft_printf.h"
 #include <stdio.h> // Aggiunta per risolvere il warning di printf
 
-char *ft_reverse(char *str)
+void	ft_reverse(char *str)
 {
     size_t len;
-    char *reversed;
     size_t i;
 
     len = ft_strlen(str);
     i = 0;
-    reversed = (char *)malloc((len + 1) * sizeof(char));
-    if (!reversed)
-        return NULL;
     while (i < len)
     {
-        reversed[i] = str[len - i - 1];
+	str[i] = str[len - i - 1];
 	i++;
     }
-    reversed[i] = '\0';
-    return reversed;
+    str[i] = '\0';
 }
