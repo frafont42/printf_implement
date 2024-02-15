@@ -6,13 +6,13 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 12:09:09 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/12 12:09:48 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/15 18:38:39 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_n_ex_len(size_t n)
+int	ft_n_ex_len(unsigned long long n)
 {
 	int	i;
 
@@ -26,4 +26,3 @@ int	ft_n_ex_len(size_t n)
 	}
 	return (i);
 }
-

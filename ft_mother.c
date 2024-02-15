@@ -6,7 +6,7 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:10:17 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/13 20:17:46 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/15 18:15:04 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int	ft_mother(char c, va_list args)
 		len += ft_putnbr(va_arg(args, int));
 	else if (c == 'u')
 		len += ft_putuint(va_arg(args, unsigned int));
-	else if (c == 'x' || c == 'X')
-		len += ft_putex(va_arg(args, long long));
+	else if (c == 'x')
+		len += ft_putex(va_arg(args, long long), "0123456789abcdef");
 	else if (c == 'X')
-		len += ft_putexx(va_arg(args, long long));
+		len += ft_putex(va_arg(args, long long), "0123456789ABCDEF");
 	else if (c == '%')
 		len += ft_putchar('%');
 	return (len);
