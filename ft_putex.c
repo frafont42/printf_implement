@@ -6,20 +6,24 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:52:14 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/15 19:17:16 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/16 20:35:02 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putex(unsigned long long n, char *base)
+int ft_putex(size_t n, char *base)
 {
 	char *n_ex;
 	int l_ex;
 	int i;
 
 	if (n == ULONG_MAX)
-		return (ft_particular(n_ex));
+	{
+		// printf("\n%d questto in putex\n", ft_particular("fffffffffffffffff"));
+		return (ft_particular("ffffffff"));
+	}
+	
 	if (n <= 0 || n > LONG_MAX)
 		return (ft_putchar('0'));
 	l_ex = ft_n_ex_len(n);
@@ -40,4 +44,3 @@ int ft_putex(unsigned long long n, char *base)
 	free(n_ex);
 	return (l_ex);
 }
-

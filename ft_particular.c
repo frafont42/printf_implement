@@ -1,15 +1,34 @@
-int ft_particular(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_particular.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/16 19:10:15 by ffontana          #+#    #+#             */
+/*   Updated: 2024/02/16 19:58:16 by ffontana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+int	ft_particular(char *str)
 {
-	int i;
-	int j;
+	char	*s;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
-	str = "ffffffffffffffff";
-	while(*str)
+	s = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1));
+	while (str[i] != '\0')
 	{
-		i += ft_putchar(str[j]);
-		j++;
+		s[i] = str[i];
+		i++;
 	}
-	return (i);
+	s[i] = '\0';
+	j += ft_putstr(s);
+	// printf("\n%d questo e j\n", j);
+	free(s);
+	return(j);
 }

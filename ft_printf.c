@@ -6,7 +6,7 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:01:55 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/15 19:24:40 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/16 20:39:46 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,11 @@ int	ft_printf(const char *mainstr, ...)
 	va_end(args);
 	return (len);
 }
+
 int main()
 {
 	int i,y;
-	i= ft_printf("%x il mio\n", ULONG_MAX);
-	y= printf("%lx\n", ULONG_MAX);
-	printf("%d il mio %d il suo", i, y);
-}
+	i= ft_printf(" %x %x %x %x %x %x %x\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	y= printf(" %x %x %x %x %x %x %x\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	printf("%d il mio %d il suo\n", i, y);
+} 

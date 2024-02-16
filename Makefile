@@ -14,7 +14,8 @@ SRCS			=	ft_strlen.c \
 					ft_putex.c \
 					ft_mother.c \
 					ft_printf.c \
-					ft_putuint.c
+					ft_putuint.c \
+					ft_particular.c
 
 OBJS = $(SRCS:.c=.o)
 
