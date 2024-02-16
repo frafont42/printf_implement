@@ -19,7 +19,7 @@ int ft_putex(unsigned long long n, char *base)
 	int i;
 
 	if (n == ULONG_MAX)
-		return (ft_putstr("ffffffffffffffff"));
+		return (ft_particular(n_ex));
 	if (n <= 0 || n > LONG_MAX)
 		return (ft_putchar('0'));
 	l_ex = ft_n_ex_len(n);
