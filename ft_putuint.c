@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putuint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/16 21:03:44 by ffontana          #+#    #+#             */
+/*   Updated: 2024/02/18 15:29:14 by ffontana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int	ft_putuint(unsigned int n)
+int	ft_putuint(unsigned long int n)
 {
 	long long nb;
 	int len;

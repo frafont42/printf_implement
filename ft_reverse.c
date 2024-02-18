@@ -6,7 +6,7 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 17:07:11 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/15 13:12:40 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/18 15:56:21 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	ft_reverse(char *str)
 	while (i < len / 2)
 	{
 		cuscinetto = str[i];
-		str[i] = str[len - i - 1];
-		str[len - i - 1] = cuscinetto;
+		str[i] = str[len - i];
+		str[len - i] = cuscinetto;
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 19:10:15 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/16 19:58:16 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/16 21:04:20 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int	ft_particular(char *str)
 	}
 	s[i] = '\0';
 	j += ft_putstr(s);
-	// printf("\n%d questo e j\n", j);
 	free(s);
-	return(j);
+	return (j);
 }

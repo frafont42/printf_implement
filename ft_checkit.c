@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checkit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ffontana <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 13:13:32 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/13 13:13:35 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/16 21:04:00 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,3 @@ int	ft_checkit(char c)
 	else
 		return (0);
 }
-
