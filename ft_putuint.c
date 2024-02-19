@@ -6,7 +6,7 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 21:03:44 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/18 15:29:14 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/19 15:14:10 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_putuint(unsigned long int n)
 {
-	long long nb;
-	int len;
+	long long	nb;
+	int			len;
 
 	len = 0;
 	nb = (long long)n;

@@ -6,42 +6,37 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:27:26 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/15 12:27:57 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/19 15:28:25 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-static int	base_len(unsigned long long n)
-{
-	int	i;
 
+int	ft_putptr(unsigned long long n)
+{
+	int		len;
+	char	buffer[8];
+	int		i;
+	char	*base;
+
+	base = "0123456789abcdef";
+	len = 0;
+	if (n == 0)
+		return (ft_putstr("0x0"));
 	i = 0;
-	while (n > 0)
+	len = 0;
+	while (n != 0)
 	{
+		buffer[i] = base[n % 16];
 		n /= 16;
 		i++;
 	}
-	return (i);
-}
-int	ft_putptr(unsigned long long add)
-{
-	int		l;
-	char	*buffer;
-
-	l = 0;
-	buffer = (char *)malloc(sizeof(char) * base_len(add));
-	while (add > 0)
+	len += ft_putstr("0x");
+	i--;
+	while (i != -1)
 	{
-		if (add % 16 > 10)
-			*buffer = 'a' + (add % 16) - 10;
-		else
-			*buffer = (add % 16) + 48;
-		buffer++;
-		add /= 16;
+		len += ft_putchar(buffer[i]);
+		i--;
 	}
-	*buffer = '\0';
-	ft_reverse(buffer);
-	l += ft_putstr(buffer);
-	free(buffer);
-	return (l);
+	return (len);
 }

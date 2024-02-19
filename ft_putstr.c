@@ -6,7 +6,7 @@
 /*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:11:49 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/16 19:58:02 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/02/19 15:13:53 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ int	ft_putstr(char *s)
 		write(1, &s[i], 1);
 		i++;
 	}
-	// printf("\n%d quisto in putstr\n", i);
 	return (i);
 }
