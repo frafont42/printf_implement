@@ -10,6 +10,7 @@ SRCS			=	ft_putnbr.c \
 					ft_putptr.c \
 					ft_putex.c \
 					ft_mother.c \
+					ft_printadd.c\
 					ft_printf.c \
 					ft_putuint.c \
 

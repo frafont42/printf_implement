@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	ft_printf(const char *mainstr, ...)
 {
@@ -35,3 +36,4 @@ int	ft_printf(const char *mainstr, ...)
 	va_end(args);
 	return (len);
 }
+

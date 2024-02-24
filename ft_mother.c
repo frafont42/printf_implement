@@ -26,7 +26,7 @@ int	ft_mother(char c, va_list args)
 	else if (c == 'u')
 		len += ft_putuint(va_arg(args, unsigned int));
 	else if (c == 'p')
-		len += ft_putptr(va_arg(args, unsigned long long));
+		len += ft_printadd(va_arg(args, unsigned long long));
 	else if (c == 'x')
 		len += ft_putex(va_arg(args, unsigned int), "0123456789abcdef");
 	else if (c == 'X')

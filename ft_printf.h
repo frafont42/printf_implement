@@ -26,6 +26,7 @@ int		ft_n_ex_len(unsigned long int n);
 int		ft_putnbr(int n);
 int		ft_putuint(unsigned long int n);
 int		ft_putptr(unsigned long long add);
+int		ft_printadd(unsigned long long add);
 int		ft_mother(char c, va_list args);
 int		ft_printf(const char *mainstr, ...);
 

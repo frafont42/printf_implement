@@ -12,31 +12,25 @@
 
 #include "ft_printf.h"
 
-int	ft_putptr(unsigned long long n)
+int	ft_putptr(unsigned long long add)
 {
-	int		len;
-	char	buffer[8];
-	int		i;
-	char	*base;
+	char *base;
+	int len;
 
+	len = 0;
+	//len += ft_putstr("0x");
+	if (add == 0)
+	{
+		len += ft_putchar('0');
+		return (len);
+	}
 	base = "0123456789abcdef";
-	len = 0;
-	if (n == 0)
-		return (ft_putstr("0x0"));
-	i = 0;
-	len = 0;
-	while (n != 0)
+	if (add > 16)
 	{
-		buffer[i] = base[n % 16];
-		n /= 16;
-		i++;
+		len += ft_putptr(add / 16);
+		len += ft_putptr(add % 16);
 	}
-	len += ft_putstr("0x");
-	i--;
-	while (i != -1)
-	{
-		len += ft_putchar(buffer[i]);
-		i--;
-	}
+	else
+		len += ft_putchar(base[add % 16]);
 	return (len);
 }
