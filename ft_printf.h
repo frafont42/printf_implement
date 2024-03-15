@@ -18,10 +18,10 @@
 # include <limits.h>
 
 int		ft_putchar(char c);
-int		ft_particular(char *str);
+//int		ft_particular(char *str);
 int		ft_putstr(char *s);
 int		ft_putex(unsigned int n, char *base);
-void	ft_reverse(char *str);
+//void	ft_reverse(char *str);
 int		ft_n_ex_len(unsigned long int n);
 int		ft_putnbr(int n);
 int		ft_putuint(unsigned long int n);

@@ -7,12 +7,12 @@ SRCS			=	ft_putnbr.c \
 					ft_putstr.c \
 					ft_putchar.c \
 					ft_n_ex_len.c \
+					ft_putuint.c \
 					ft_putptr.c \
+					ft_printadd.c \
 					ft_putex.c \
 					ft_mother.c \
-					ft_printadd.c\
 					ft_printf.c \
-					ft_putuint.c \
 
 OBJS = $(SRCS:.c=.o)
 

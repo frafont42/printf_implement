@@ -25,7 +25,7 @@ int	ft_putptr(unsigned long long add)
 		return (len);
 	}
 	base = "0123456789abcdef";
-	if (add > 16)
+	if (add >= 16)
 	{
 		len += ft_putptr(add / 16);
 		len += ft_putptr(add % 16);

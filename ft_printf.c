@@ -36,4 +36,3 @@ int	ft_printf(const char *mainstr, ...)
 	va_end(args);
 	return (len);
 }
-
