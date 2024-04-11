@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printadd.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ffontana <ffontana@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/11 17:40:16 by ffontana          #+#    #+#             */
+/*   Updated: 2024/04/11 17:40:28 by ffontana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_printadd(unsigned long long add)
+int	ft_printadd(unsigned long long add)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (add == 0)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: ffontana <ffontana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:27:26 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/19 15:28:25 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:31:58 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 int	ft_putptr(unsigned long long add)
 {
-	char *base;
-	int len;
+	char	*base;
+	int		len;
 
 	len = 0;
-	//len += ft_putstr("0x");
 	if (add == 0)
 	{
 		len += ft_putchar('0');

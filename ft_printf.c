@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ffontana <ffontana@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: ffontana <ffontana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:01:55 by ffontana          #+#    #+#             */
-/*   Updated: 2024/02/19 15:06:46 by ffontana         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:40:37 by ffontana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_printf(const char *mainstr, ...)
 {
